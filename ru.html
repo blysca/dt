@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dyvotech</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="dist/vendor/dropmic/dropmic.css">
+    <link rel="stylesheet" href="dist/styles/style.min.css">
+    <!--<link rel="stylesheet" href="src/styles/screen.css">-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+
+<section class="hero" id="hero">
+    <div class="hero-bg-m" style="background-image: url(dist/img/bg/hero.jpg)">
+        <div class="container">
+            <a class="hero__burger js-burger"
+               href=""><img src="dist/img/burger_dark.svg" alt="mobile navigation"></a>
+        </div>
+
+    </div>
+    <div class="hero-bg-d" style="background-image: url(dist/img/bg/hero.jpg)"></div>
+    <div class="container">
+        <h1><img src="dist/img/dyvotech.svg" alt="dyvotech"></h1>
+        <h3>Удивительные идеи. Технологичные решения</h3>
+        <button class="btn-accent js-btn-contact">написать нам</button>
+    </div>
+    <i class="hero-btn js-hero-scroll-down"><img src="dist/img/icon_arrow_down.svg" height="32" width="32" alt=""></i>
+</section>
+<section class="scroll-spy js-scroll-spy">
+    <div class="ss-bg-fx">
+        <div class="container" data-gumshoe-header data-scroll-header>
+            <div class="ss-lg js-scroll-to-hero"><img src="dist/img/dyvotech.svg" alt="dyvotech"></div>
+            <nav data-gumshoe class="nav-list js-nav-list">
+                <button class="close js-burger-close"><img src="dist/img/btn_close.svg" alt=""></button>
+                <img class="mb-lg js-scroll-to-hero" src="dist/img/icon_01_medium.svg" alt="">
+                <div id="navList">
+
+                    <a data-scroll class="nav-link" href="#s1">Компетенции</a>
+                    <a data-scroll class="nav-link" href="#s2">Сервисы</a>
+                    <a data-scroll class="nav-link" href="#s3">Партнеры</a>
+                    <a data-scroll class="nav-link" href="#s4">О нас</a>
+                    <a data-scroll class="nav-link" href="#s5">Контакты</a>
+                </div>
+
+                <div class="ss-lang">
+                    <a href="#" class="active">Ru</a>
+                    <a href="/ua">Ua</a>
+                    <a href="/en">En</a>
+                </div>
+            </nav>
+
+            <div class="ss-actions">
+                <a class="ss-actions__arrow js-btn-contact" href="#"><img src="dist/img/arrow.svg" alt=""></a>
+                <div class="dropmic" data-dropmic="1" data-dropmic-direction="bottom-middle" role="navigation">
+                    <button data-dropmic-btn class="active">Ru</button>
+                    <div class="dropmic-menu" aria-hidden="true">
+                        <ul class="dropmic-menu__list" role="menu">
+                            <li class="dropmic-menu__listItem" role="menuitem">
+                                <a class="dropmic-menu__listContent" tabindex="-1" href="/ua">Ua</a>
+                            </li>
+                            <li class="dropmic-menu__listItem" role="menuitem">
+                                <a class="dropmic-menu__listContent" tabindex="-1" href="/en">En</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="ss-actions__burger js-burger" href=""><img src="dist/img/burger.svg" alt="mobile navigation"></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="s1" class="page competences">
+    <div class="container">
+        <h2>Компетенции</h2>
+        <ul>
+            <li style="background-image: url(dist/img/competences/competences_01.jpg)"><h3>Розничный банкинг</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_02.jpg)"><h3>Кредитные решения</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_03.jpg)"><h3>Платежи</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_04.jpg)"><h3>Лояльность</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_05.jpg)"><h3>CRM</h3></li>
+        </ul>
+    </div>
+</section>
+<section id="s2" class="page services">
+    <div class="container">
+        <h2>Сервисы</h2>
+        <div class="left">
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_01.jpg)">
+                    <h3>Стратегический консалтинг</h3>
+                </div>
+                <p class="dscr">Определение и актуализация бизнес-целей, диагностика бизнеса, анализ рынка,
+                    стратегическое планирование</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_02.jpg)">
+                    <h3>Product development</h3>
+                </div>
+                <p class="dscr">Разработка и реализация продуктовой линейки</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_03.jpg)">
+                    <h3>Маркетинг</h3>
+                </div>
+                <p class="dscr">Разработка и реализация маркетинговой стратегии</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_04.jpg)">
+                    <h3>Операционные решения</h3>
+                </div>
+                <p class="dscr">Организационные и технические решения для операционных процессов</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_05.jpg)">
+                    <h3>Бизнес-планирование</h3>
+                </div>
+                <p class="dscr">Оцифровка бизнес-целей, составление бизнес-плана, расчет точки безубыточности и точки
+                    окупаемости, бюджетирование, расчет инвестиций, расчет ликвидности под ключ</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_06.jpg)">
+                    <h3>Дистрибуция</h3>
+                </div>
+                <p class="dscr">Определение и построение каналов дистрибуции – цифровых и физических</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_07.jpg)">
+                    <h3>Разработка программного обеспечения</h3>
+                </div>
+                <p class="dscr">Поставка коробочных решений, разработка программного обеспечения по ТЗ заказчика,
+                    подготовка ТЗ согласно бизнес-требований заказчика для собственной или сторонней разработки</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s3" class="page partners">
+    <div class="container">
+        <h2>Партнеры</h2>
+    </div>
+    <div class="partners-bg">
+        <div class="m" style="background-image: url(dist/img/bg/mob_partners.jpg)"></div>
+        <div class="d" style="background-image: url(dist/img/bg/partners.jpg)"></div>
+        <ul class="container">
+            <li><img src="dist/img/partners/mastercard.svg" alt=""></li>
+            <li><img src="dist/img/partners/oxci-bank.svg" alt=""></li>
+            <li><img src="dist/img/partners/plastic-card.svg" alt=""></li>
+            <li><img src="dist/img/partners/tac.svg" alt=""></li>
+            <li><img src="dist/img/partners/ukr-processing-center.svg" alt=""></li>
+            <li><img src="dist/img/partners/4bill.svg" alt=""></li>
+            <li><img src="dist/img/partners/KETCHUP.svg" alt=""></li>
+        </ul>
+    </div>
+</section>
+<section id="s4" class="page about">
+    <div class="container">
+        <h2>О нас</h2>
+        <h3>DYVOTECH — IT-компания, созданная единомышленниками из банковской и IT сферы</h3>
+        <p>Мы – опытная команда практиков, за плечами которых – десятки успешных проектов. Сотрудничество с нами это
+            реализация бизнес-проектов с гарантированным результатом!</p>
+        <p>Мы создаем розничные банки, кредитные фабрики, платежные решения, программы лояльности, CRM-системы и многое
+            другое</p>
+        <div class="time-line">
+            <div class="time-line-bg-d" style="background-image: url(dist/img/bg/about.jpg)"></div>
+            <div class="time-line-bg-m" style="background-image: url(dist/img/bg/about--m.jpg)"></div>
+            <ul>
+                <li>
+                    <h3>17 лет</h3>
+                    <p>Банкинг</p>
+                </li>
+                <li>
+                    <h3>10 лет</h3>
+                    <p>Кредитование, Лояльность</p>
+                </li>
+                <li>
+                    <h3>8 лет</h3>
+                    <p>Платежи, CRM</p>
+                </li>
+                <li>
+                    <h3>5 лет</h3>
+                    <p>Разработка</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<section id="s5" class="page contacts">
+    <div class="container">
+        <div class="contacts-content">
+            <h2>Контакты</h2>
+            <h3>улица Юрия Ильенко, 18Б, Киев, 04050</h3>
+            <p>С удовольствием встретимся с вами в нашем уютном офисе )</p>
+            <ul>
+                <li>
+                    <a href="mailto:info@dyvotech.com">
+                        <span class="ico"><img src="dist/img/email.svg" alt="info@dyvotech.com"></span>
+                        <span>info@dyvotech.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:0800468349">
+                        <span class="ico"><img src="dist/img/phone.svg" alt="0800468349"></span>
+                        <span>0 800 468 349</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="btn-accent js-btn-contact">написать нам</button>
+        </div>
+    </div>
+    <div class="map">
+        <div class="wrapper">
+            <div id="map"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="copyright">© Dyvotech 2018. Все права защищены</footer>
+
+<diV class="js-form proposal-form">
+    <form autocomplete="off" method="POST" action="feedback.php">
+    <h3>Напишите нам, если Вы заинтересованы в сотрудничестве:</h3>
+    <div class="form-group">
+        <input required
+               name="email"
+               class="form-control" type="email" placeholder="Email">
+    </div>
+        <div class="form-group">
+            <input required
+                   name="name"
+                   class="form-control" type="text" placeholder="Ваши Имя и Фамилия">
+        </div>
+
+        <div class="form-group">
+            <textarea required
+                      name="dscr"
+                      class="form-control" placeholder="Текст сообщения"></textarea>
+
+        </div>
+        <div class="form-captcha">
+            <div class="g-recaptcha" data-sitekey="6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ"></div>
+        </div>
+    <div class="actions">
+        <button type="submit" class="btn-submit ">отправить</button>
+        <button type="button" class="btn-close js-form-btn-close">закрыть</button>
+    </div>
+    </form>
+    <div class="js-form-valid form-status">Мы дадим обратную связь в ближайшее время :)</div>
+    <div class="js-form-invalid form-status">Упс! Вы ввели неверные данные :(</div>
+</diV>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: {lat: 50.4663182, lng: 30.476752},
+      styles: [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dadada"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c9c9c9"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        }
+      ]
+    });
+
+    var image = {
+      url: 'dist/img/icon_marker.svg',
+      scaledSize: new google.maps.Size(64, 70),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 0)
+    };
+
+    var beachMarker = new google.maps.Marker({
+      position: {lat: 50.4663182, lng: 30.476752},
+      map: map,
+      icon: image
+    });
+  }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA32NdoBPotsu4-kNayniEHWt32ZAcpnSI&callback=initMap">
+</script>
+<script src="https://cdn.rawgit.com/sha256/Pristine/master/dist/pristine.js"></script>
+<script src="dist/vendor/dropmic/dropmic.js"></script>
+<script src="dist/vendor/scroll-spy/vanillajs-scrollspy.min.js"></script>
+<script src="dist/js/main.js"></script>
+</body>
+</html>

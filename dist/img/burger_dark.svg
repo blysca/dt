@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#0b0c0e}
+        </style>
+    </defs>
+    <g id="btn_hamburger_dark" transform="translate(-320 -112)">
+        <path id="bg" d="M0 0h24v24H0z" class="cls-1" transform="translate(320 112)"/>
+        <g id="icon" transform="translate(35 -12)">
+            <rect id="Rectangle_4" width="16" height="2" class="cls-2" data-name="Rectangle 4" rx="1" transform="translate(289 129)"/>
+            <rect id="Rectangle_5" width="16" height="2" class="cls-2" data-name="Rectangle 5" rx="1" transform="translate(289 135)"/>
+            <rect id="Rectangle_6" width="16" height="2" class="cls-2" data-name="Rectangle 6" rx="1" transform="translate(289 141)"/>
+        </g>
+    </g>
+</svg>

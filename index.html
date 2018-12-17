@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dyvotech</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="dist/vendor/dropmic/dropmic.css">
+    <link rel="stylesheet" href="dist/styles/style.min.css">
+    <!--<link rel="stylesheet" href="src/styles/screen.css">-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+
+<section class="hero" id="hero">
+    <div class="hero-bg-m" style="background-image: url(dist/img/bg/hero.jpg)">
+        <div class="container">
+            <a class="hero__burger js-burger"
+               href=""><img src="dist/img/burger_dark.svg" alt="mobile navigation"></a>
+        </div>
+
+    </div>
+    <div class="hero-bg-d" style="background-image: url(dist/img/bg/hero.jpg)"></div>
+    <div class="container">
+        <h1><img src="dist/img/dyvotech.svg" alt="dyvotech"></h1>
+        <h3>Дивовижні ідеї. Технологічні рішення</h3>
+        <button class="btn-accent js-btn-contact">написати нам</button>
+    </div>
+    <i class="hero-btn js-hero-scroll-down"><img src="dist/img/icon_arrow_down.svg" height="32" width="32" alt=""></i>
+</section>
+<section class="scroll-spy js-scroll-spy">
+    <div class="ss-bg-fx">
+        <div class="container" data-gumshoe-header data-scroll-header>
+            <div class="ss-lg js-scroll-to-hero"><img src="dist/img/dyvotech.svg" alt="dyvotech"></div>
+            <nav data-gumshoe class="nav-list js-nav-list">
+                <button class="close js-burger-close"><img src="dist/img/btn_close.svg" alt=""></button>
+                <img class="mb-lg js-scroll-to-hero" src="dist/img/icon_01_medium.svg" alt="">
+                <div id="navList">
+
+                    <a data-scroll class="nav-link" href="#s1">Компетенції</a>
+                    <a data-scroll class="nav-link" href="#s2">Сервіси</a>
+                    <a data-scroll class="nav-link" href="#s3">Партнери</a>
+                    <a data-scroll class="nav-link" href="#s4">Про нас</a>
+                    <a data-scroll class="nav-link" href="#s5">Контакти</a>
+                </div>
+
+                <div class="ss-lang">
+                    <a href="#" class="active">Ua</a>
+                    <a href="/ru">Ru</a>
+                    <a href="/en">En</a>
+                </div>
+            </nav>
+
+            <div class="ss-actions">
+                <a class="ss-actions__arrow js-btn-contact" href="#"><img src="dist/img/arrow.svg" alt=""></a>
+                <div class="dropmic" data-dropmic="1" data-dropmic-direction="bottom-middle" role="navigation">
+                    <button data-dropmic-btn class="active">Ua</button>
+                    <div class="dropmic-menu" aria-hidden="true">
+                        <ul class="dropmic-menu__list" role="menu">
+                            <li class="dropmic-menu__listItem" role="menuitem">
+                                <a class="dropmic-menu__listContent" tabindex="-1" href="/ru">Ru</a>
+                            </li>
+                            <li class="dropmic-menu__listItem" role="menuitem">
+                                <a class="dropmic-menu__listContent" tabindex="-1" href="/en">En</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="ss-actions__burger js-burger" href=""><img src="dist/img/burger.svg" alt="mobile navigation"></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="s1" class="page competences">
+    <div class="container">
+        <h2>Компетенції</h2>
+        <ul>
+            <li style="background-image: url(dist/img/competences/competences_01.jpg)"><h3>Роздрібний банкінг</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_02.jpg)"><h3>Кредитні рішення</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_03.jpg)"><h3>Платежі</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_04.jpg)"><h3>Лояльність</h3></li>
+            <li style="background-image: url(dist/img/competences/competences_05.jpg)"><h3>CRM</h3></li>
+        </ul>
+    </div>
+</section>
+<section id="s2" class="page services">
+    <div class="container">
+        <h2>Сервіси</h2>
+        <div class="left">
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_01.jpg)">
+                    <h3>Стратегічний консалтинг</h3>
+                </div>
+                <p class="dscr">Визначення і актуалізація бізнес-цілей, діагностика бізнесу, аналіз ринку, стратегічне
+                    планування</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_02.jpg)">
+                    <h3>Product development</h3>
+                </div>
+                <p class="dscr">Розробка і реалізація продуктової лінійки</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_03.jpg)">
+                    <h3>Маркетинг</h3>
+                </div>
+                <p class="dscr">Розробка і реалізація маркетингової стратегії</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_04.jpg)">
+                    <h3>Операційні рішення</h3>
+                </div>
+                <p class="dscr">Організаційні та технічні рішення для побудови, оптимізації операційних процесів</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_05.jpg)">
+                    <h3>Бізнес-планування</h3>
+                </div>
+                <p class="dscr">Визначення бізнес-цілей, складання бізнес-плану, розрахунок точки беззбитковості і точки
+                    окупності, бюджетування, розрахунок інвестицій, розрахунок ліквідності під ключ</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_06.jpg)">
+                    <h3>Дистрибуція</h3>
+                </div>
+                <p class="dscr">Визначення і побудова каналів дистрибуції - цифрових і фізичних</p>
+            </div>
+
+            <div class="card">
+                <div class="bg" style="background-image: url(dist/img/services/services_07.jpg)">
+                    <h3>Розробка програмного забезпечення</h3>
+                </div>
+                <p class="dscr">Поставка готових рішень, розробка програмного забезпечення за вимогами замовника,
+                    підготовка технічних завдань згідно бізнес-вимог замовника для власної або сторонньої розробки</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s3" class="page partners">
+    <div class="container">
+        <h2>Партнери</h2>
+    </div>
+    <div class="partners-bg">
+        <div class="m" style="background-image: url(dist/img/bg/mob_partners.jpg)"></div>
+        <div class="d" style="background-image: url(dist/img/bg/partners.jpg)"></div>
+        <ul class="container">
+            <li><img src="dist/img/partners/mastercard.svg" alt=""></li>
+            <li><img src="dist/img/partners/oxci-bank.svg" alt=""></li>
+            <li><img src="dist/img/partners/plastic-card.svg" alt=""></li>
+            <li><img src="dist/img/partners/tac.svg" alt=""></li>
+            <li><img src="dist/img/partners/ukr-processing-center.svg" alt=""></li>
+            <li><img src="dist/img/partners/4bill.svg" alt=""></li>
+            <li><img src="dist/img/partners/KETCHUP.svg" alt=""></li>
+        </ul>
+    </div>
+</section>
+<section id="s4" class="page about">
+    <div class="container">
+        <h2>Про нас</h2>
+        <h3>DYVOTECH — IT-компанія, створена однодумцями з банківської та IT сфер</h3>
+        <p>Ми - досвідчена команда практиків, за плечима яких - десятки успішних проектів. Співпраця з нами - є
+            гарантією реалізації бізнес-проектів з гарантованим результатом!</p>
+        <p>Ми створюємо роздрібні банки, кредитні фабрики, платіжні рішення, програми лояльності, CRM-системи, тощо</p>
+        <div class="time-line">
+            <div class="time-line-bg-d" style="background-image: url(dist/img/bg/about.jpg)"></div>
+            <div class="time-line-bg-m" style="background-image: url(dist/img/bg/about--m.jpg)"></div>
+            <ul>
+                <li>
+                    <h3>17 років</h3>
+                    <p>Банкінг</p>
+                </li>
+                <li>
+                    <h3>10 років</h3>
+                    <p>Кредитування, Лояльность</p>
+                </li>
+                <li>
+                    <h3>8 років</h3>
+                    <p>Платежі , CRM</p>
+                </li>
+                <li>
+                    <h3>5 лет</h3>
+                    <p>Розробка</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<section id="s5" class="page contacts">
+    <div class="container">
+        <div class="contacts-content">
+            <h2>Контакти</h2>
+            <h3>вулиця Юрія Іллєнка, 18Б, Київ, 04050</h3>
+            <p>Із задоволенням зустрінемося з вами в нашому затишному офісі)</p>
+            <ul>
+                <li>
+                    <a href="mailto:info@dyvotech.com">
+                        <span class="ico"><img src="dist/img/email.svg" alt="info@dyvotech.com"></span>
+                        <span>info@dyvotech.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:0800468349">
+                        <span class="ico"><img src="dist/img/phone.svg" alt="0800468349"></span>
+                        <span>0 800 468 349</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="btn-accent js-btn-contact">написати нам</button>
+        </div>
+    </div>
+    <div class="map">
+        <div class="wrapper">
+            <div id="map"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="copyright">© Dyvotech 2018. Всі права захищені</footer>
+
+<script>
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: {lat: 50.4663182, lng: 30.476752},
+      styles: [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dadada"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c9c9c9"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        }
+      ]
+    });
+
+    var image = {
+      url: 'dist/img/icon_marker.svg',
+      scaledSize: new google.maps.Size(64, 70),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 0)
+    };
+
+    var beachMarker = new google.maps.Marker({
+      position: {lat: 50.4663182, lng: 30.476752},
+      map: map,
+      icon: image
+    });
+  }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA32NdoBPotsu4-kNayniEHWt32ZAcpnSI&callback=initMap">
+</script>
+<diV class="js-form proposal-form">
+    <form autocomplete="off" id="msg" method="POST" action="feedback.php">
+        <h3>Напишіть нам, якщо Ви зацікавлені у співпраці:</h3>
+        <div class="form-group">
+            <input required
+                   name="email"
+                   class="form-control" type="email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <input required
+                   name="name"
+                   class="form-control" type="text" placeholder="Ваші Ім'я та Прізвище">
+        </div>
+
+        <div class="form-group">
+            <textarea required
+                      name="dscr"
+                      class="form-control" placeholder="Текст повідомлення"></textarea>
+
+        </div>
+        <div class="form-captcha">
+            <div class="g-recaptcha" data-sitekey="6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ"></div>
+        </div>
+        <div class="actions">
+            <button type="submit" class="btn-submit">надіслати</button>
+            <button type="button" class="btn-close js-form-btn-close">закрити</button>
+        </div>
+    </form>
+    <div class="js-form-valid form-status">Ми дамо зворотний зв'язок найближчим часом :)</div>
+    <div class="js-form-invalid form-status">Упс! Ви ввели невірні дані :(</div>
+</diV>
+<script src="https://cdn.rawgit.com/sha256/Pristine/master/dist/pristine.js"></script>
+<script src="dist/vendor/dropmic/dropmic.js"></script>
+<script src="dist/vendor/scroll-spy/vanillajs-scrollspy.min.js"></script>
+<script src="dist/js/main.js"></script>
+</body>
+</html>

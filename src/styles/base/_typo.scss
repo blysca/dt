@@ -1,0 +1,102 @@
+html  {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 106.25%;
+  quotes: "“" "”";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  &.is-overflow{
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: $almost-black;
+  font-synthesis: none;
+  -moz-font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: ltr;
+  text-align: left;
+
+  font-size: 14px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  font-family: 'Montserrat', sans-serif;
+  color: $white;
+  font-style: normal;
+}
+
+h2{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: 0.4px;
+
+
+  @include mq(md){
+    font-size: 48px;
+    letter-spacing: 0.8px;
+  }
+}
+
+h3{
+  font-weight: 500;
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: 0.1px;
+
+  @include mq(md){
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+}
+
+button.btn-accent{
+  //
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  //
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  text-transform: lowercase;
+  color: $white;
+  height: 40px;
+  border-radius: 56px;
+  background-color: $azure;
+  border: 0;
+  box-shadow: none;
+  padding: 0 16px;
+  transition: $ease-in;
+
+  @include mq(md){
+    font-size: 16px;
+    padding: 0 32px;
+    line-height: 56px;
+    height: 56px;
+  }
+
+  &:hover, &:focus, &:active, &:active:focus{
+    background-color: darken($pomegranate, 5);
+    transition: $ease-out;
+  }
+}

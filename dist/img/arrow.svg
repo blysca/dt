@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .cls-1{fill:#1694f2}.cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="btn_contactus" transform="translate(-1038 -92)">
+        <rect id="bg" width="32" height="32" class="cls-1" rx="16" transform="translate(1038 92)"/>
+        <path id="icon" d="M2995.707 2584.945v13l-4-4h-6z" class="cls-2" transform="translate(-1938.707 -2482.945)"/>
+    </g>
+</svg>

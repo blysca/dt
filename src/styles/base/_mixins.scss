@@ -1,0 +1,51 @@
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+$breakpoints: (
+  "xs":        400px,
+  "xs-wide":   480px,
+  "sm":      560px,
+  "sm-wide": 640px,
+  "md":       768px,
+  "md-wide":  1024px,
+  "lg":      1248px,
+  "lg-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+/**/
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+    @return null;
+  }
+}
+$z-indexes: (
+  "outdated-browser",
+  "modal",
+  "site-header",
+  "page-wrapper",
+  "site-footer"
+);
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

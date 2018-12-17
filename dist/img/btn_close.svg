@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#fff;opacity:.48}
+        </style>
+    </defs>
+    <g id="btn_close" transform="translate(-320 -112)">
+        <path id="bg" d="M0 0h24v24H0z" class="cls-1" transform="translate(320 112)"/>
+        <path id="icon" d="M-4572.565-1.151l-5.657-5.657-5.657 5.657a1 1 0 0 1-1.413 0 1 1 0 0 1 0-1.414l5.656-5.656-5.656-5.656a1 1 0 0 1 0-1.414 1 1 0 0 1 1.413 0l5.657 5.657 5.657-5.657a1 1 0 0 1 1.415 0 1 1 0 0 1 0 1.414l-5.657 5.656 5.657 5.656a1 1 0 0 1 0 1.414 1 1 0 0 1-.707.293 1 1 0 0 1-.708-.293z" class="cls-2" transform="translate(4910.222 132.222)"/>
+    </g>
+</svg>

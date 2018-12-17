@@ -1,0 +1,241 @@
+.about {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @include mq(sm, max) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  @include mq(md) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .container {
+    @include mq(md) {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    > p {
+      margin: 0;
+      opacity: 0.8;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.71;
+      letter-spacing: 0.1px;
+
+      @include mq(md) {
+        margin-right: 16px;
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+        flex: 0 0 calc(50% - 8px);
+        max-width: calc(50% - 8px);
+      }
+
+      &:nth-child(2n) {
+        @include mq(md) {
+          margin-right: 0;
+        }
+      }
+
+      + p {
+        margin-top: 12px;
+
+        @include mq(md) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 32px;
+
+    @include mq(md) {
+      margin-bottom: 64px;
+      width: 100%;
+    }
+  }
+
+  h3 {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: 0.1px;
+
+    @include mq(md) {
+      width: 100%;
+      margin-bottom: 32px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.2px;
+    }
+  }
+
+
+  .time-line {
+    margin-top: 32px;
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+    background-color: $almost-black;
+
+    @include mq(md) {
+      margin-top: 64px;
+    }
+
+    .time-line-bg-m, .time-line-bg-d {
+      border-radius: 8px;
+      position: absolute;
+      z-index: z("site-footer");
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .time-line-bg-m {
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    .time-line-bg-d {
+      display: none;
+      @include mq(md) {
+        display: block;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      position: relative;
+      z-index: z("page-wrapper");
+
+      @include mq(md) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      li {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-content: flex-start;
+
+        @include mq(md) {
+          padding-bottom: 40px;
+          padding-right: 4px;
+        }
+
+        &:nth-child(1) {
+          height: 400px;
+          padding-bottom: 136px;
+
+          @include mq(md) {
+            height: 354px;
+            padding-bottom: 40px;
+            flex: auto;
+          }
+
+          @include mq(md-wide) {
+            max-width: 47.5%;
+          }
+        }
+
+        &:nth-child(2) {
+          height: 164px;
+          border-top: 1px solid $almost-black;
+
+          @include mq(md) {
+            border: none;
+            border-left: 1px solid $almost-black;
+            height: 354px;
+          }
+
+          @include mq(md-wide) {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+
+        }
+
+        &:nth-child(3) {
+          height: 146px;
+          border-top: 1px solid $almost-black;
+
+          @include mq(md) {
+            border: none;
+            border-left: 1px solid $almost-black;
+            height: 354px;
+          }
+
+          @include mq(md-wide) {
+            flex: 0 0 20%;
+            max-width: 20%;
+          }
+        }
+
+        &:nth-child(4) {
+          height: 90px;
+          border-top: 1px solid $almost-black;
+
+          @include mq(md) {
+            border: none;
+            border-left: 1px solid $almost-black;
+            height: 354px;
+          }
+
+          @include mq(md-wide) {
+            flex: 0 0 12.5%;
+            max-width: 12.5%;
+          }
+        }
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.21;
+        letter-spacing: 0.2px;
+      }
+
+      p {
+        margin: 0;
+        opacity: 0.8;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.29;
+        letter-spacing: 0.1px;
+      }
+
+    }
+  }
+
+}

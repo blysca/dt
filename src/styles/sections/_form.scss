@@ -1,0 +1,237 @@
+.proposal-form {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 80px 24px;
+  height: 100vh;
+  overflow: auto;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: $ease-in;
+  background-color: rgba($form-bg, .95);
+
+
+  &.active {
+    z-index: z("modal");
+    visibility: visible;
+    opacity: 1;
+    transition: $ease-out;
+  }
+
+  h3 {
+    margin: 0 0 32px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: $white;
+
+    @include mq(md) {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.56;
+    }
+  }
+
+  form {
+    max-width: 352px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: z("page-wrapper");
+
+    input, textarea {
+      padding: 19px 16px;
+      height: 54px;
+      border-radius: 4px;
+      background-color: rgba($white-two, .08);
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: left;
+      color: rgba($white, .8);
+      transition: border-color .23s ease-in;
+      border: none;
+      display: block;
+      width: 100%;
+      @include placeholder {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: rgba($white, .8);
+      }
+
+      &:focus, &:active {
+        border: 1px solid $azure;
+        padding: 18px 15px;
+        transition: border-color .18s ease-out;
+      }
+    }
+
+    input {
+      margin-bottom: 12px;
+
+      @include mq(md) {
+        margin-bottom: 16px;
+      }
+    }
+
+    textarea {
+      margin-bottom: 16px;
+      height: 112px;
+      resize: none;
+    }
+
+    .form-captcha {
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      &:not(.has-success){
+        ~ .actions {
+          .btn-submit {
+            user-select: none;
+            pointer-events: none;
+            background-color: rgba($white, 0.08);
+            color: rgba($white, 0.48);
+            transition: $ease-out;
+          }
+        }
+      }
+
+      .text-help {
+        display: none;
+      }
+    }
+
+    .has-danger {
+      .form-control {
+        border: 1px solid rgba(tomato, 0.8);
+        padding: 18px 15px;
+        transition: border-color .18s ease-out;
+      }
+
+      ~ .actions {
+        .btn-submit {
+          user-select: none;
+          pointer-events: none;
+          background-color: rgba($white, 0.08);
+          color: rgba($white, 0.48);
+          transition: $ease-out;
+        }
+      }
+    }
+
+    .has-success {
+      .form-control {
+        border: 1px solid rgba($green-apple, 0.8);
+        padding: 18px 15px;
+        transition: border-color .18s ease-out;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .btn-submit {
+      border: 0;
+      border-radius: 56px;
+      background-color: $azure;
+      text-transform: lowercase;
+      padding: 11px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.29;
+      letter-spacing: normal;
+      text-align: center;
+      color: $white;
+      outline: none;
+      transition: $ease-in;
+
+      &.disabled, &[disabled] {
+        user-select: none;
+        pointer-events: none;
+        background-color: rgba($white, 0.08);
+        color: rgba($white, 0.48);
+      }
+    }
+
+    .btn-close {
+      margin: 0 0 0 8px;
+      border: 0;
+      background: 0 0;
+      text-transform: lowercase;
+      padding: 11px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.29;
+      letter-spacing: normal;
+      text-align: center;
+      color: $white;
+      outline: none;
+    }
+  }
+
+  .form-status {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: $white;
+    padding: 17px 24px 16px;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: $ease-in;
+
+    @include mq(md) {
+      padding: 31px 24px;
+      font-size: 14px;
+      line-height: 1.43;
+    }
+
+    &.validation-error {
+      background-color: rgba($tomato, 0.8);
+    }
+
+    &.validation-success {
+      background-color: rgba($green-apple, 0.8);
+    }
+
+    &.validation-success, &.validation-error {
+      z-index: z("modal");
+      visibility: visible;
+      opacity: 1;
+      transition: $ease-out;
+    }
+  }
+}

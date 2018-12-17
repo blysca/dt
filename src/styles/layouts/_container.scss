@@ -1,0 +1,26 @@
+.container{
+  width: 100%;
+
+  @include mq(sm, max){
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  @include mq(sm){
+    max-width: 480px;
+    @include push--auto;
+  }
+
+  @include mq(md){
+    max-width: 720px;
+
+  }
+
+  @include mq(md-wide){
+    max-width: 960px;
+  }
+
+  @include mq(lg){
+    max-width: 1088px;
+  }
+}

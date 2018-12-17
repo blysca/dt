@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dropdown plugin</title>
+    <link rel="stylesheet" href="../dist/dropmic.css">
+    <style>
+        body {
+            width: 100vw;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropmic" data-dropmic="1" role="navigation">
+        <button data-dropmic-btn>Bottom right (default)</button>
+        <div class="dropmic-menu" aria-hidden="true">
+            <div class="dropmic-menu__custom">Custom content</div>
+            <ul class="dropmic-menu__list" role="menu">
+                <li class="dropmic-menu__listItem" role="menuitem">
+                    <a class="dropmic-menu__listContent" tabindex="-1" href="http://example.com">label link</a>
+                </li>
+                <li class="dropmic-menu__listItem" role="menuitem">
+                    <button class="dropmic-menu__listContent" tabindex="-1">button</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="dropmic" data-dropmic="2" data-dropmic-direction="bottom-left">
+        <button data-dropmic-btn>Bottom left</button>
+    </div>
+
+    <div class="dropmic" data-dropmic="3" data-dropmic-direction="bottom-middle">
+        <button data-dropmic-btn>Bottom middle</button>
+    </div>
+
+    <div class="dropmic" data-dropmic="4" data-dropmic-direction="top-middle">
+        <button data-dropmic-btn>Top middle</button>
+    </div>
+
+    <div class="dropmic" data-dropmic="5" data-dropmic-direction="top-left">
+        <button data-dropmic-btn>Top left</button>
+    </div>
+
+    <div class="dropmic" data-dropmic="6" data-dropmic-direction="top-right">
+        <button data-dropmic-btn>Top right</button>
+    </div>
+
+
+    <script src="../dist/dropmic.js"></script>
+    <script>
+        var dropmic = new Dropmic(document.querySelector('[data-dropmic="1"]'), {
+            onOpen: function() {
+                console.log("is open");
+                dropmic.updateTargetBtn("Click to close");
+            },
+            onClose: function() {
+                console.log("is now closed");
+                dropmic.updateTargetBtn("Bottom right (default)");
+            }
+        });
+
+        var dropmic2 = new Dropmic(document.querySelector('[data-dropmic="2"]'));
+        dropmic2.setCustomContent("Custom content");
+        dropmic2.addLink('link 1', 'http://example.com');
+        dropmic2.addLink('link 2', 'http://example.com');
+        dropmic2.addBtn('close dropdown', function() {
+            dropmic2.close();
+        });
+
+        var dropmic3 = new Dropmic(document.querySelector('[data-dropmic="3"]'));
+        dropmic3.addLink('link 1', 'http://example.com');
+        dropmic3.addLink('link 2', 'http://example.com');
+        dropmic3.setCustomContent("Custom content");
+
+        var dropmic4 = new Dropmic(document.querySelector('[data-dropmic="4"]'));
+        dropmic4.addLink('link 1', 'http://example.com');
+        dropmic4.addLink('link 2', 'http://example.com');
+        dropmic4.addLink('link 3', 'http://example.com');
+
+        var dropmic5 = new Dropmic(document.querySelector('[data-dropmic="5"]'));
+        dropmic5.addLink('link 1', 'http://example.com');
+        dropmic5.addLink('link 2', 'http://example.com');
+        dropmic5.addLink('link 3', 'http://example.com');
+
+        var dropmic6 = new Dropmic(document.querySelector('[data-dropmic="6"]'));
+        dropmic6.addLink('link 1', 'http://example.com');
+        dropmic6.addLink('link 2', 'http://example.com');
+        dropmic6.addLink('link 3', 'http://example.com');
+    </script>
+
+</body>
+
+</html>

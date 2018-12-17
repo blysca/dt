@@ -1,0 +1,36 @@
+{
+  "name": "dropmic",
+  "version": "0.3.0",
+  "description": "A lightweight dropdown plugin",
+  "main": "dist/dropmic.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.0",
+    "browserify": "^14.4.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agence-webup/dropmic.git"
+  },
+  "keywords": [
+    "dropdown",
+    "dropmic"
+  ],
+  "author": "Agence Webup",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agence-webup/dropmic/issues"
+  },
+  "homepage": "https://github.com/agence-webup/dropmic#readme"
+}
