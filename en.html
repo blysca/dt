@@ -237,7 +237,7 @@
 <footer class="copyright">© Dyvotech 2018. All rights reserved</footer>
 
 <diV class="js-form proposal-form">
-    <form autocomplete="off" method="POST" action="feedback.php">
+    <form autocomplete="off" id="msg" method="POST" action="feedback.php">
         <h3>Write to us if you are interested in cooperation:</h3>
         <div class="form-group">
             <input required
@@ -256,8 +256,9 @@
                   name="dscr"
                   class="form-control" placeholder="Message"></textarea>
         </div>
-        <div class="form-captcha">
-            <div class="g-recaptcha" data-sitekey="6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ"></div>
+        <div class="form-captcha form-group js-form-captcha">
+            <div class="g-recaptcha" data-sitekey="6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ"
+                 data-callback="correctCaptcha"></div>
         </div>
         <div class="actions">
             <button type="submit" class="btn-submit ">send</button>

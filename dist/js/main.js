@@ -1,17 +1,16 @@
-const cumulativeOffset = function(element) {
+const cumulativeOffset = function (element) {
   var top = 0, left = 0;
   do {
-    top += element.offsetTop  || 0;
+    top += element.offsetTop || 0;
     left += element.offsetLeft || 0;
     element = element.offsetParent;
-  } while(element);
+  } while (element);
 
   return {
     top: top,
     left: left
   };
 };
-
 
 var dropmic = new Dropmic(document.querySelector('[data-dropmic="1"]'), {
   onOpen: function () {
@@ -41,7 +40,6 @@ for (let i = 0; i < mobNavList.length; i++) {
   }, false);
 }
 
-
 const burgers = document.querySelectorAll('.js-burger');
 for (let i = 0, len = burgers.length; i < len; i++) {
   let b = burgers[i];
@@ -49,10 +47,11 @@ for (let i = 0, len = burgers.length; i < len; i++) {
   b.addEventListener('click', function (e) {
     e.preventDefault();
     bPositions = cumulativeOffset(b);
-    document.querySelector('.js-burger-close').style.left = (bPositions.left-4) + 'px';
+    document.querySelector('.js-burger-close').style.left = (bPositions.left - 4) + 'px';
     document.querySelector('.js-nav-list').classList.add('active');
   }, false);
 }
+
 document.querySelector('.js-burger-close').addEventListener('click', function (e) {
   e.preventDefault();
   document.querySelector('.js-nav-list').classList.remove('active');
@@ -76,6 +75,7 @@ function scrollSpyFx(el) {
     }
   });
 }
+
 scrollSpyFx(document.querySelector('.js-scroll-spy'));
 
 const navbar = document.querySelector('#navList');
@@ -133,9 +133,9 @@ window.onload = function () {
 
     if (valid && response) {
       const data = {
-        "email":this.email.value,
-        "name":this.name.value,
-        "dscr":this.dscr.value,
+        "email": this.email.value,
+        "name": this.name.value,
+        "dscr": this.dscr.value,
         "response": response
       };
       document.querySelectorAll('.has-success').forEach(function (item) {
@@ -146,7 +146,7 @@ window.onload = function () {
         item.classList.remove('has-danger');
       });
 
-      this.reset();
+      this.reset('6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ');
       grecaptcha.reset();
       sendData(data);
 
@@ -165,16 +165,16 @@ function sendData(data) {
   var urlEncodedDataPairs = [];
   var name;
 
-  for(name in data) {
+  for (name in data) {
     urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
   }
   urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
-  XHR.addEventListener('load', function() {
+  XHR.addEventListener('load', function () {
     document.querySelector('.js-form-invalid').classList.remove('validation-error');
     document.querySelector('.js-form-valid').classList.add('validation-success');
   });
 
-  XHR.addEventListener('error', function() {
+  XHR.addEventListener('error', function () {
     document.querySelector('.js-form-valid').classList.remove('validation-success');
     document.querySelector('.js-form-invalid').classList.add('validation-error');
   });
@@ -184,4 +184,9 @@ function sendData(data) {
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
   XHR.send(urlEncodedData);
+}
+
+function correctCaptcha() {
+  console.log('*bububu*');
+  document.querySelector('.js-form-captcha.form-group').classList.add('has-success');
 }
