@@ -64,7 +64,7 @@ document.body.querySelector('.js-form-btn-close').addEventListener('click', func
 function scrollSpyFx(el) {
   const offsetTop = el.offsetTop;
 
-  window.addEventListener("scroll", function (event) {
+  window.addEventListener("scroll", function () {
     var scroll = this.scrollY;
 
     if (scroll >= offsetTop) {
@@ -128,16 +128,15 @@ window.onload = function () {
   form.addEventListener('submit', function (e) {
     var valid = pristine.validate();
     console.log('Form is valid: ' + valid);
-    if (!valid) {
-      e.preventDefault();
-      console.log('*invalid*');
-    } else {
-      e.preventDefault();
-      console.log('*valid*');
+    e.preventDefault();
+    let response = grecaptcha.getResponse();
+
+    if (valid && response) {
       const data = {
         "email":this.email.value,
         "name":this.name.value,
-        "dscr":this.dscr.value
+        "dscr":this.dscr.value,
+        "response": response
       };
       document.querySelectorAll('.has-success').forEach(function (item) {
         item.classList.remove('has-success');
@@ -148,6 +147,7 @@ window.onload = function () {
       });
 
       this.reset();
+      grecaptcha.reset();
       sendData(data);
 
       setTimeout(function () {
@@ -169,14 +169,12 @@ function sendData(data) {
     urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
   }
   urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
-  XHR.addEventListener('load', function(event) {
-    // console.log('*Yeah! Data sent and response loaded.*');
+  XHR.addEventListener('load', function() {
     document.querySelector('.js-form-invalid').classList.remove('validation-error');
     document.querySelector('.js-form-valid').classList.add('validation-success');
   });
 
-  XHR.addEventListener('error', function(event) {
-    // console.log('Oops! Something goes wrong.');
+  XHR.addEventListener('error', function() {
     document.querySelector('.js-form-valid').classList.remove('validation-success');
     document.querySelector('.js-form-invalid').classList.add('validation-error');
   });
