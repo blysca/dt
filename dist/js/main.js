@@ -149,7 +149,7 @@ window.onload = function () {
       sendData(data);
 
       setTimeout(function () {
-        this.reset();
+        form.reset();
         grecaptcha.reset('6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ');
         document.querySelector('.js-form-valid').classList.remove('validation-success');
         document.querySelector('.js-form-btn-close').click();
