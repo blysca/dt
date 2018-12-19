@@ -146,11 +146,11 @@ window.onload = function () {
         item.classList.remove('has-danger');
       });
 
-      this.reset('6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ');
-      grecaptcha.reset();
       sendData(data);
 
       setTimeout(function () {
+        this.reset();
+        grecaptcha.reset('6Ld6oIEUAAAAAGhuOay1FYy-6v2WtRmSDyX98CLZ');
         document.querySelector('.js-form-valid').classList.remove('validation-success');
         document.querySelector('.js-form-btn-close').click();
       }, 5000)
@@ -187,6 +187,6 @@ function sendData(data) {
 }
 
 function correctCaptcha() {
-  console.log('*bububu*');
+  //console.log('*bububu*');
   document.querySelector('.js-form-captcha.form-group').classList.add('has-success');
 }
